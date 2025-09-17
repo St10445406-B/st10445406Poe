@@ -1,43 +1,35 @@
 ﻿@{
-    ViewData["Title"] = "Dashboard";
-    Layout = "~/Views/Shared/_Layout.cshtml";
+    ViewBag.Title = "Dashboard";
 }
 
-<h2>Dashboard</h2>
-<p>Overview of claims and lecturers (dummy data)</p>
+<!-- <link rel="stylesheet" href="~/css/site.css" /> -->
 
-<div class="row">
-    <div class="col-md-6">
-        <h4>Claims Summary</h4>
-        <table class="table">
-            <thead>
-                <tr>
-                    <th>Claim Number</th>
-                    <th>Status</th>
-                    <th>Amount</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr><td>CLM001</td><td>Pending</td><td>R2500</td></tr>
-                <tr><td>CLM002</td><td>Approved</td><td>R4800</td></tr>
-                <tr><td>CLM003</td><td>Rejected</td><td>R1500</td></tr>
-            </tbody>
-        </table>
-    </div>
-    <div class="col-md-6">
-        <h4>Lecturers Summary</h4>
-        <table class="table">
-            <thead>
-                <tr>
-                    <th>Name</th>
-                    <th>Email</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr><td>John Doe</td><td>john@example.com</td></tr>
-                <tr><td>Jane Smith</td><td>jane@example.com</td></tr>
-            </tbody>
-        </table>
+<div class="container">
+    <h1 class="page-title">Dashboard</h1>
+
+    <div class="parent">
+        <div class="div1 box">
+            <h2>Lecturers</h2>
+            <p>Manage and view lecturer information.</p>
+            <form asp-controller="Lecturer" asp-action="Index" method="get">
+                <button type="submit" class="btn">Go to Lecturers</button>
+            </form>
+        </div>
+
+        <div class="div3 box">
+            <h2>Claims</h2>
+            <p>Submit, verify, and approve claims.</p>
+            <form asp-controller="Claim" asp-action="Index" method="get">
+                <button type="submit" class="btn">Go to Claims</button>
+            </form>
+        </div>
+
+        <div class="div4 box">
+            <h2>Status Tracking</h2>
+            <p>Track claim progress and settlements.</p>
+            <form asp-controller="Claim" asp-action="Status" method="get">
+                <button type="submit" class="btn">Track Status</button>
+            </form>
+        </div>
     </div>
 </div>
-
