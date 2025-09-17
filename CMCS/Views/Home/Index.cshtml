@@ -1,0 +1,43 @@
+﻿@{
+    ViewData["Title"] = "Dashboard";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Dashboard</h2>
+<p>Overview of claims and lecturers (dummy data)</p>
+
+<div class="row">
+    <div class="col-md-6">
+        <h4>Claims Summary</h4>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Claim Number</th>
+                    <th>Status</th>
+                    <th>Amount</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr><td>CLM001</td><td>Pending</td><td>R2500</td></tr>
+                <tr><td>CLM002</td><td>Approved</td><td>R4800</td></tr>
+                <tr><td>CLM003</td><td>Rejected</td><td>R1500</td></tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="col-md-6">
+        <h4>Lecturers Summary</h4>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Email</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr><td>John Doe</td><td>john@example.com</td></tr>
+                <tr><td>Jane Smith</td><td>jane@example.com</td></tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
